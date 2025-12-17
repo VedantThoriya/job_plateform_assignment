@@ -19,7 +19,7 @@ app.use('/api/applications', require('./routes/applicationRoutes'));
 app.use('/uploads', express.static('uploads'));
 
 // Default Route
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
     res.send('API is running...');
 });
 

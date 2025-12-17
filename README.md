@@ -38,7 +38,7 @@ Follow these steps to set up the project locally.
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/job-portal-api.git
+    git clone https://github.com/VedantThoriya/job_plateform_assignment.git
     cd node_js_task
     ```
 

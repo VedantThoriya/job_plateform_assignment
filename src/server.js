@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const app = require('./app');
 const seedJobs = require('./config/seedJobs');
+const job = require('./config/cron');
 
 // Load env vars
 dotenv.config();
@@ -12,6 +13,9 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
     await connectDB();
     await seedJobs();
+
+    // Start Cron Job
+    job.start();
 
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
